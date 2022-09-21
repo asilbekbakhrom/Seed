@@ -1,0 +1,11 @@
+@model Seed.ViewModel.RegisterViewModel
+
+<form method="post" asp-action="Register" asp-controller="Account">
+    <input hidden="true" asp-for="ReturnUrl">
+    <input asp-for="Username">
+    <input type="password" asp-for="Password">
+
+    <button type="submit">Login</button>
+</form>
+
+<a href="/Account/register?returnUrl=@Model.ReturnUrl">Login</a>
